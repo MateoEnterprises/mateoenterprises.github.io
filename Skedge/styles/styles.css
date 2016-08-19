@@ -1,0 +1,65 @@
+body {
+  background: #666;
+/*  background-image: linear-gradient(#222, #fff);*/
+  font-family: 'Rock Salt', cursive;
+  max-width: 100%;
+}
+
+.logo {
+  background-image: radial-gradient(#777, #fff);
+  color: #fff;
+}
+
+main {
+  padding: 3% 0;
+  display: block;
+}
+
+.video {
+  margin-bottom: 20px;
+}
+
+.dice {
+  max-width: 25px;
+}
+
+.slogan {
+  font-size: .75em;
+}
+
+.readyButton {
+  width: 80%;
+}
+
+.main-container {
+  margin: auto;
+  color: #333;
+}
+
+.btn {
+  border-radius: 100px;
+}
+
+input {
+  background: #444;
+  text-align: center;
+  color: #fff;
+}
+
+.modal-content {
+  color: #151515;
+  background: #bbb;
+}
+
+.border {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+
+input {
+  font-family: sans-serif;
+}
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang='en' ng-app="devmtnApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Rock+Salt' type='text/css'>
+    <link rel="icon" href="images/icons/favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>
+      Skedge
+    </title>
+  </head>
+  <body ng-controller="devCont">
+<!--    *****Main Nav bar Section*****-->
+      <header class="container">
+        <section class="jumbotron logo">
+          <div class="text-center">
+            <h1 class="col-md-6 col-md-offset-3">Skedge'D</h1>
+            <p class="slogan col-md-4 col-md-offset-4">Make plans without planning. It's that easy.</p>
+            <img class="" src="images/foursqaure/poweredby-one-color-cdf070cc7ae72b3f482cf2d075a74c8c.png">
+          </div>
+        </section>
+      </header>
+      
+  <!--    *****Main Body with query and results section*****-->
+      <main class="main-container text-center">
+        <section ng-show="!ready" class="center-block">
+          <div class="video">
+            <h6>When you're done watching puppy videos...</h6>
+            <iframe height="315" width="560" class="center-block" src="https://www.youtube.com/embed/videoseries?list=PLnvlWeanMIw43jpDmTur5KTpEi01lYbPv&autoplay=1" frameborder="0"></iframe>
+          </div>
+          <div class="container">
+          <div class="row">
+          <button class="btn btn-primary col-md-6 col-md-offset-3" href="#" ng-click="locations = !locations; ready = !ready" ng-class="{ active: locations }">Ready?</button>
+          </div>
+          </div>
+        </section>
+        <div class="text-center">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+            <form ng-show="locations" name="locationQs">
+            <section class="border text-center">
+              <h4>Locale</h4>
+              <section ng-show="!hideInputLocation">
+                <button class="btn btn-primary" ng-click="getLocation(); hideInputLocation = !hideInputLocation; showGEO = !showGEO" name="location">Use Current Location</button><br>or<br>
+                <input type="text" placeholder="Enter your location" ng-model="location">
+              </section>
+              <label ng-show="showGEO" class="btn-success btn">Geo-loco Enabled</label>
+            </section>
+            <section class="border">
+              <h4>Just how lazy are you?</h4>
+              <input type="number" placeholder="Miles to travel" ng-model="distance">
+              <h4>Need something to do after?</h4>
+              <input type="radio" ng-click="rActivity = !rActivity" ng-change="test(value)" ng-model="value" value=true name="doActivity" checked> Yep.              
+              <br>
+              <input type="radio" ng-model="value" value=false name="doActivity" ng-change="test(value)"> No thanks<br>
+            </section>
+            <button class="btn btn-primary" href="#" ng-click="costs = !costs; locations = !locations; activity = !activity" ng-class="{ active: locations }" ng-disabled="locationQs.$invalid">Next</button>
+          </form>
+
+          <form ng-show="costs" name="costsQs">
+            <section class="border" ng-show="boolval">
+              <h4>Activities!</h4>
+              <input type="radio" value="4d4b7105d754a06377d81259" ng-model="activity" name="randomActivity"> Outdoors and Rec
+              <br>
+              <input type="radio" value="4d4b7104d754a06370d81259" ng-model="activity" name="randomActivity"> Arts and Entertainment
+              <br>
+            </section>
+            <section class="border">
+              <h4>What's your budget?</h4>
+              <input type="radio" ng-model="price" value="1" name="budget"> I'm pretty cheap, let's keep it less than $10
+              <br>
+              <input type="radio" ng-model="price" value="2" name="budget" checked="checked"> Meh, let's go up to $20
+              <br>
+              <input type="radio" ng-model="price" value="3" name="budget"> Just got a check from Grandma
+              <br>
+              <input type="radio" ng-model="price" value="4" name="budget"> Mr./M(r)s. Money Bags Riches
+            </section>        
+            <!-- Button trigger modal -->
+            <button class="btn btn-success" data-toggle="modal" data-target="#myModal" ng-click="queryFourSquare(); costs = !costs; results = !results;" ng-disabled="costsQs.$invalid">Skedge it!</button>
+          </form>
+            </div>
+          </div>   
+        </div>
+      <!--*****results from search*****-->
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h1 class="modal-title titleName" id="myModalLabel">Skedge'd</h1>
+              <img src="images/foursqaure/poweredby-one-color-cdf070cc7ae72b3f482cf2d075a74c8c.png">
+            </div>
+            <div class="modal-body">
+              <section>
+                <h4>{{ randomEstablishment.venue.name }}</h4>
+                <img alt="icon from FourSquare" ng-src="{{randomEstablishment.venue.categories[0].icon.prefix}}bg_64{{randomEstablishment.venue.categories[0].icon.suffix}}">
+                <p>Rating: {{ randomEstablishment.venue.rating }} <br>Cost: {{ randomEstablishment.venue.price.message }}</p>
+                <a href="https://foursquare.com/venue/{{randomEstablishment.venue.id}}" target="_blank"><img src="images/foursqaure/connectTo-990dd166e85a12426a6f57634875256c.png"></a>
+              </section>
+              <section ng-show="boolval">
+                <h4>{{ randomActivity.name }}</h4>
+                <img alt="icon from FourSquare" ng-src="{{randomActivity.categories[0].icon.prefix}}bg_64{{randomActivity.categories[0].icon.suffix}}">
+                <br><br>
+                <a href="https://foursquare.com/venue/{{randomActivity.id}}" target="_blank"><img src="images/foursqaure/connectTo-990dd166e85a12426a6f57634875256c.png"></a>
+              </section>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="ready = !ready">Close</button>
+              <a href="#" ng-click="queryFourSquare()"><span class="dice"><img src="images/random/Two_red_dice_01.svg.png" height="25px"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </main>
+    
+    
+<!--    *****Awesome footer /w contact*****-->
+    <footer></footer>
+    
+    
+    
+    
+<!--    *****Script Links*****-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>	
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="ecma/app.js"></script>
+    <script src="ecma/service.js"></script>
+  </body>
+</html>

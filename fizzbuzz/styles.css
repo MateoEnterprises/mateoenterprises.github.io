@@ -1,0 +1,34 @@
+html, body {
+  width: 100%;
+  margin: 0 auto;
+  background: #555;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+}
+.wrapper {
+  max-width: 420px;
+  min-width: 420px;
+  height: 480px;
+  border: 4px solid #fff;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+.game_title {
+  font-family: fantasy;
+  font-size: 2em;
+  color: #2af;
+}
+section {
+  border: 7px solid black;
+  border-radius: 20px;
+  margin: 10px;
+}
+h2 {
+  color: #2af;
+}
+.button {
+  color: red;
+  padding-top: 5px;
+  border-radius: 25px;
+}
