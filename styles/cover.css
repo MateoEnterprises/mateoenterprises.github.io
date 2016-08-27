@@ -8,6 +8,9 @@ a:focus,
 a:hover {
   color: #fff;
 }
+a span.fa {
+  color: #fff;
+}
 
 /* Custom default button */
 .btn-default,
@@ -19,6 +22,19 @@ a:hover {
   border: 1px solid #fff;
 }
 
+/* **SOCIAL BUTTON STYLES** */
+
+.btn-linkedin {
+  background: #007BB6;
+}
+
+.btn-github {
+  background: #444;
+}
+
+.btn-facebook {
+  background: #3B5998;
+}
 
 /*
  * Base structure
