@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  background: url("../images/coverBG.jpg");
+  background: url("coverBG.jpg");
   margin: auto;
   max-width: 90%;
   color: #FFF;
