@@ -21,37 +21,13 @@
 
   </head>
 
-  <body ng-controller='mainController'>
+  <body>
 
-    <div class="site-wrapper" >
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h1 class="masthead-brand">{{greeting}}</h1>
-            </div>
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">Site Under (serious) Construction.</h1>
-            <p>Thanks for visiting. I am in the process of rebuilding my personal website but wanted you to be able to check in and see updates. Check back weekly to see the updates that are taking place.</p>
-            <p>
-              <a href="projects/indexOLD.html" class="btn btn-warning">The Old Me.</a>
-              <button class="btn btn-success">The New Me.</button>
-            </p>
-            
-          </div>
-        </div>
-
-      </div>
-
-    </div>
+    <div class="site-wrapper" ng-view>
 
     <!-- Script Links -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
     <script src="ecma/myPage.js"></script>
   </body>
 </html>
