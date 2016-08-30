@@ -58,7 +58,8 @@ body {
 }
 
 .coverPage {
-  background: url("coverBG.jpg");
+  background: url("coverBG.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .aboutMe {
