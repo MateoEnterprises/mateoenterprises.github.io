@@ -36,6 +36,16 @@ a span.fa {
   background: #3B5998;
 }
 
+.glyphicon-text-size,
+.glyphicon-text-size:hover,
+.glyphicon-text-size:focus {
+  background: #000;
+  color: #FFF;
+  padding: 15px 15px;
+  border-radius: 4px;
+  margin-left: -13px;
+}
+
 /*
  * Base structure
  */
