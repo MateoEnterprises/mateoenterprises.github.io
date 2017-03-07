@@ -2,6 +2,10 @@
  * Globals
  */
 
+ .btn-react {
+   height: 100px;
+ }
+
 /* Links */
 a,
 a:focus,
