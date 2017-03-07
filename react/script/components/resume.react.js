@@ -13,13 +13,13 @@ var Resume = React.createClass({
 });
 
 var Icon = React.createClass({
-    setInitState: function () {
-        return { classNames: 'glyphicon glyphicon-'}
+    getInitialState: function () {
+        return { className: 'glyphicon glyphicon-'}
     },
 
     render: function () {
         return (
-            <span className={"glyphicon glyphicon-" + this.props.icon} aria-hidden="true">&nbsp;</span>
+            <span className={this.state.className + this.props.icon} aria-hidden="true">&nbsp;</span>
         );
     }
 });
