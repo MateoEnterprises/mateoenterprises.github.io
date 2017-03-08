@@ -14,7 +14,7 @@ body {
     background: #31b0d5;
 }
 
-nav.navbar {
+h2.updates, nav.navbar {
     border-radius: 0px;
 }
 

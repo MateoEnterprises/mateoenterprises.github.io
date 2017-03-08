@@ -14,7 +14,7 @@ var ResumeButton = React.createClass({
     render: function () {
         return (
             <div className="wrapper">
-                <a type="button" className="btn btn-info btn-lg centerButton" href="../pages/MatThompsonCV.pdf" target="_blank">
+                <a type="button" className="btn btn-info btn-lg centerButton" href="./images/resumeCV.pdf" target="_blank">
                     <Icon icon="list-alt"></Icon>
                     {this.props.name}
                 </a>
@@ -38,7 +38,7 @@ var Icon = React.createClass({
 var Updates = React.createClass({
     render: function () {
         return (
-            <h2 className="btn btn-warning center-block">
+            <h2 className="btn btn-warning center-block updates">
                 Updates in the works
             </h2>
         )
