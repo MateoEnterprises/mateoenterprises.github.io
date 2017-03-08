@@ -3,7 +3,6 @@ var Main = React.createClass({
         return (
             <main>
                 <ResumeButton name="Resume/CV" className="btn-group"/>
-                <Updates/>
             </main>
         )
     }
@@ -38,8 +37,8 @@ var Icon = React.createClass({
 var Updates = React.createClass({
     render: function () {
         return (
-            <h2 className="btn btn-warning center-block updates">
-                Updates in the works
+            <h2 className="btn btn-danger center-block updates">
+                Updates in the works while I teach myself <img src="./images/react.png" className="reactImg30px"/>
             </h2>
         )
     }

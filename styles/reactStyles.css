@@ -14,8 +14,17 @@ body {
     background: #31b0d5;
 }
 
+h2.updates {
+    margin-top: auto;
+    padding: 0px;
+}
+
 h2.updates, nav.navbar {
     border-radius: 0px;
+}
+
+.reactImg30px {
+    height: 30px;
 }
 
 a.btnSocial {
