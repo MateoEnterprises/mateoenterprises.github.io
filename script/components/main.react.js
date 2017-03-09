@@ -37,7 +37,7 @@ var Icon = React.createClass({
 var Updates = React.createClass({
     render: function () {
         return (
-            <h2 className=" btn-danger center-block updates">
+            <h2 className="btn btn-danger center-block updates">
                 Updates in the works while I teach myself <img src="./images/react.png" className="reactImg30px"/>
             </h2>
         )
