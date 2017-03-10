@@ -1,6 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
 var Navbar = React.createClass({
     render: function () {
         return (
@@ -19,22 +16,19 @@ var SocialLinks = React.createClass({
         var buttonsInfo = [
             {
                 image: 'linkedin',
-                imageLink: 'https://www.linkedin.com/in/mateoenterprises',
-                id: 1
+                imageLink: 'https://www.linkedin.com/in/mateoenterprises'
             },{
                 image: 'github',
-                imageLink: 'https://github.com/MateoEnterprises',
-                id: 2
+                imageLink: 'https://github.com/MateoEnterprises'
             },{
                 image: 'facebook',
-                imageLink: 'https://www.facebook.com/mathew.thompson2',
-                id: 3
+                imageLink: 'https://www.facebook.com/mathew.thompson2'
             }
         ];
 
         buttonsInfo.forEach(function (key) {
             buttons.push(
-                <a className="btn btn-social btnSocial" href={key.imageLink} target="_blank" key={key.id}>
+                <a className="btn btn-social btnSocial" href={key.imageLink} target="_blank">
                     <span className={"fa fa-2x fa-" + key.image}/>
                 </a>
             )
@@ -44,4 +38,4 @@ var SocialLinks = React.createClass({
             <div className="floatRight">{buttons}</div>
         )
     }
-});
+})
