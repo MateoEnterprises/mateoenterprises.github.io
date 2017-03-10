@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 var Main = React.createClass({
     render: function () {
         return (
@@ -34,7 +37,7 @@ var Icon = React.createClass({
     }
 });
 
-var Updates = React.createClass({
+Updates = React.createClass({
     render: function () {
         return (
             <h2 className="btn btn-danger center-block updates">
@@ -42,4 +45,4 @@ var Updates = React.createClass({
             </h2>
         )
     }
-})
+});
