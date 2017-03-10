@@ -53,7 +53,7 @@ var Updates = React.createClass({
     render: function () {
         return (
             <h2 className="btn btn-danger center-block updates">
-                Updates in the works while I teach myself <img src="./images/react.png" className="reactImg30px"/>
+                Updates in the works while I teach myself <img src="./images/react.png" className="reactImg30px"/> if I can.
             </h2>
         )
     }
