@@ -3,11 +3,17 @@ import React from 'react';
 import Name from './name';
 import SocialLinks from './social_links';
 
-const TitleBar = () => {
+const TitleBar = (props) => {
+  const socialButtons = props.socialButtons.map((button)=> {
+    return <SocialLinks socialButton={button} key={button.image}/>
+  })
+
   return (
     <nav className="navbar">
       <Name/>
-      <SocialLinks/>
+      <div className="floatRight">
+        {socialButtons}
+      </div>
     </nav>
   )
 }

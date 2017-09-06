@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const SocialLinks = () => {
+const SocialLinks = ({socialButton}) => {
   return (
-    <div>
-      Social Links to appear here.
-    </div>
+    <a className="btn btn-social btnSocial" href={socialButton.imageLink} target="_blank">
+      <span className={"fa fa-2x fa-" + socialButton.image}/>
+    </a>
   )
 }
 
