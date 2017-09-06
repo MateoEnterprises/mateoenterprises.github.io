@@ -10,8 +10,14 @@ body {
   float: right;
 }
 
-.navbar {
+/* .navbar {
   background: #31b0d5;
+} */
+
+.navbar-brand {
+  padding-top: 10px !important;
+  font-size: 1.5rem !important;
+  color: #FFF;
 }
 
 h2.updates {
