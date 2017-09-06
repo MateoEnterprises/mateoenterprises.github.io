@@ -5,10 +5,10 @@ import SocialLinks from './social_links';
 
 const TitleBar = () => {
   return (
-    <div>
+    <nav className="navbar">
       <Name/>
       <SocialLinks/>
-    </div>
+    </nav>
   )
 }
 

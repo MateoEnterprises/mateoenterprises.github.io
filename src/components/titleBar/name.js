@@ -2,9 +2,9 @@ import React from 'react';
 
 const Name = () => {
   return (
-    <div>
+    <span className="navbar-brand">
       Mathew Thompson
-    </div>
+    </span>
   )
 }
 
