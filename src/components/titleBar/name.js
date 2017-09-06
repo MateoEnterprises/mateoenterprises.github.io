@@ -3,7 +3,7 @@ import React from 'react';
 const Name = () => {
   return (
     <span className="navbar-brand">
-      Mathew Thompson
+      <a href="./style/cv.pdf">Mathew Thompson</a>
     </span>
   )
 }
