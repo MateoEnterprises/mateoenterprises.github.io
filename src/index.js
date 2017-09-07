@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import TitleBar from './components/titleBar/titleBar';
+import AboutMe from './components/aboutMe/aboutMe';
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class App extends Component {
     return (
       <div>
         <TitleBar socialButtons={this.state.socialButtons}/>
+        <AboutMe/>
       </div>
     )
   }

@@ -1,7 +1,7 @@
 body {
   width: 100%;
   height: 100%;
-  color: #FFF;
+  /* color: #FFF; */
   /* background: url("../images/underConstruction.jpg") no-repeat center center fixed;
   background-size: cover; */
 }
@@ -44,4 +44,9 @@ a.btnSocial {
 
 a span.fa {
   color: #fff;
+}
+
+.aboutMe {
+  height: 700px;
+  background: url("../images/aboutMeBG.jpg") no-repeat center center fixed;
 }
