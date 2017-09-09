@@ -1,10 +1,18 @@
 import React from 'react';
 
+import Header from './header';
+
+/* 
+Alex
+KeepnTrack
+Boxfit
+Skedge
+*/
 
 const Projects = () => {
   return (
     <div className="projects">
-      This is where projects done will be.
+      <Header/>
     </div>
   )
 }
