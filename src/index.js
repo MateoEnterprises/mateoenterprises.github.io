@@ -21,6 +21,21 @@ class App extends Component {
           image: 'facebook',
           imageLink: 'https://www.facebook.com/mathew.thompson2'
         }
+      ],
+      projects: [
+        {
+          title: 'Alexandria',
+          imageSrc: './images/alexandria.png'
+        },{
+          title: 'KeepnTrack',
+          imageSrc: './images/keepntrack.png' 
+        },{
+          title: 'Boxfit',
+          imageSrc: './images/boxfit.png'
+        },{
+          title: 'Skedge\'d',
+          imageSrc: ''
+        }
       ]
     }
   }
